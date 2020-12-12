@@ -92,7 +92,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #112041;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1909,7 +1909,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			background-color: #ffffff;
-			color: #312450 !important;
+			color: #112041 !important;
 		}
 
 			input[type="submit"].primary:after,
@@ -2350,7 +2350,7 @@ input, select, textarea {
 
 		select option {
 			color: #ffffff;
-			background: #312450;
+			background: #112041;
 		}
 
 		select:focus::-ms-value {
@@ -2519,7 +2519,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #312450;
+			color: #112041;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
