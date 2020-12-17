@@ -18,18 +18,22 @@
 							<h1 class="major">Home Assistant Deployment</h1>
 							<span class="image fit"><img src="images/homeassitant.png" /></span>
                             <p style="text-align:left">
-                                Home Assistant by Hass.io has several ways the software can be deployed.  I tested a variety of ways to deploy Home Assistant, but chose to leverage the Docker containerized deployment method.
+								<h4>How did I get started?</h4>
+								<br>
+								Home Assistant by Hass.io has several ways the software can be deployed.  I tested a variety of ways to deploy Home Assistant, but chose to leverage the Docker containerized deployment method.
+								Why did I choose the Docker method?  Well thats where my over enginnering kicks in.  Sure I could have deployed the Raspberry OS image, but in my research I found issues with the reads on writes on the SD card.
+								Sure, I could have deployed the installer directly on a Linux OS and ran it natively, but I knew with Docker I had more flexibility.  In my day job, I am always looking for ways to improve infrastructure ops and security.
+								My brain kicked in and I decided if I deployed Home Assistant as a container, I could leverage Kubernetes to scale my container if I needed to and I could leverage container management tools to automatically perform actions if needed.
+								Well, thats not all.  Home Assistant is configured with YAML (files.
+															
+								<br>
                                 <br>
                                 <h3>Getting Started - What do you Need</h3>
-                                <br>
-                                I chose to leverage Ubuntu as my operating system of choice.  Home Assistant supports a variety of operating systems and deploymnet methods.  More can be found <a href="https://www.home-assistant.io/docs/installation/">here.</a>
-								<br>
-								<h3>How did I get started?</h3>
 								<br>
 								The first thing I determined is where I wanted to run Home Assistant.  After my testing, I determined a Raspberry Pi didn't make long term sense and the reads and writes required for Home Assistant would destroy the micro sd card in the Pi.
 								I had an old server laying around that I used to run vmWare on for a home lab and it more than met the minimum specs required to run Home Assistant.
 								<br>
-								<h4>What are those Specs?</h4>
+								<h4>What are those Minimum Specs?</h4>
 								<table>
 									<thead>
 										<tr>
@@ -52,6 +56,12 @@
 										</tr>
 									</tbody>
 								</table>
+								<br>
+                                I chose to leverage Ubuntu as my operating system of choice.  Home Assistant supports a variety of operating systems and deploymnet methods.  More can be found <a href="https://www.home-assistant.io/docs/installation/">here.</a>
+								<br>
+								<br>
+								
+								
 								After deciding what hardware I wanted to run Home Assistant on long term, I needed an installer for Ubuntu's latest LTS (Long Term Support) version.  Currently, Ubuntu's latest LTS version is 20.04.  You can download it <a href="https://ubuntu.com/download">here.</a>
 								After downloading Ubuntu, I used (<a href="https://www.balena.io/etcher/">Balena Etcher</a> on my Mac OS to write the files to a USB for installtion.
 							</p>
