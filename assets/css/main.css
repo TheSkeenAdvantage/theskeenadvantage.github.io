@@ -2606,6 +2606,12 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+	/* Specific styling for AWS Journey image */
+	#aws-journey-img {
+		width: 50%; /* Adjust as needed */
+		height: auto;
+		margin: 20px auto; /* Add spacing and center the image */
+  	}
 
 /* List */
 
