@@ -1,218 +1,617 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<meta http-equiv="Cache-control" content="no-cache">
-		<meta http-equiv="X-Content-Type-Options" content="nosniff">
-		<title>The Skeen Advantage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" href="images/over-engineer-code.jpeg">
-	</head>
-	<body class="is-preload">
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>The Skeen Advantage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		<!-- Sidebar -->
-		<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#one">About Me</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="#two">Employment History</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
-		
-		<!-- Wrapper -->
-			<div id="wrapper">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d2d5f 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
 
-				<!-- Intro -->
-				<!--	<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<section>
-							<a href="#" class="image"><img src="images/mattskeen.jpeg" alt="" data-position="center center" /></a>
-							<div class = "content"></div>
-								<div class="inner">
-									<h1>The Skeen Advantage</h1>
-							
-									<p>The Skeen Advantage is what I can provide your business.  </p>
-								<ul class="actions">
-									<li><a href="#one" class="button scrolly">Learn more</a></li>
-								</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-				-->
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/mattskeen.jpeg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>About Me</h2>
-									<p>I am a distinguished IT and Security professional with expertise in a diverse range of technologies within multiple industry standards. <br>
-										<br>
-										I develop strategic roadmaps and work with business leaders to ensure business objectives are met with operational efficiency, securely, and cost effectively. <br>
-										<br>
-										I continue to demonstrate success in managing Cloud Native Solutions, DevOps, Networking, Systems Administration, Governance and Security related technologies. <br>
-										<br>
-										I am an extremely talented, dedicated, and results-oriented individual with a proven ability to create and implement policies, standards, procedures, and processes that improve business functionality. </p>
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
 
-										<H2>Certifications </H2>
-										<img src="images/certified-information-systems-security-professional-cissp.png" style="float:left" width="176" height="176" />
-										<img src="images/certified-information-security-manager-cism.png" style="float:middle" width="176" height="176" />
-										<img src="images/ccskv4.png" style="float:middle" width="176" height="176" />
-								</div>
-							</div>
-						</section>
-					</section>
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(100, 200, 255, 0.7);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
 
-				<!-- Two -->
-					<section id="two" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Employment History</h2>
-							
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Moodys</h3>
-									<p><b>April 2022 - Present</b> <br>
-									BISO, Head of Security Architecture</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Fishtech Group / CYDERES</h3>
-									<p><b>August 2016 - April 2022</b> <br>
-									Director of Information Technology</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Workview</h3>
-									<p><b>May 2016 - August 2016</b><br>
-									Director of Information Technology</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>GEHA</h3>
-									<p><b>August 2015 - May 2016</b><br>
-									Security Analyst</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>FishNet Security / Optiv</h3>
-									<p><b>July 2010 - May 2015</b><br>
-									Systems Administrator</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Epiq Systems</h3>
-									<p><b>May 2015 - August 2015</b><br>
-									Sr. Systems Administrator</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="#three" class="button">Contact Me</a></li>
-							</ul>
-						</div>
-					</section>
-				
-				<!-- Blog -->
-				
-				<!-- <section id="blog" class="wrapper style2 fullscreen fade-up">
-					<div class="inner">
-						<h1>Over Engineering 101 and Adventures in Technology</h1>
-						<p>I have a tendency to over engineer projects I take on. <br>
-						The goal of this blog is document challenges, sucessess, and <br>
-						focuses on the process of deploying and maintaing various forms of technology.	
-						<ul class="actions">
-							<li><a href="blog.html" class="button scrolly">Blog</a></li>
-						</ul>
-					</div>
-				</section> --> 
-			
-				<!-- Three -->
-					<section id="three" class="wrapper style4 fade-up">
-						<div class="inner">
-							<h2>Getting in touch is easy!</h2>
-							<p> Contact me with any questions.
-							</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>
-											Kansas City, MO 64145<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">matt@theskeenadvantage.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(479) 966-9499</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<!--<li><a href="https://twitter.com/skeen_advantage" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>-->
-												<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-												<li><a href="https://github.com/TheSkeenAdvantage" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-												<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>  -->
-												<li><a href="https://www.linkedin.com/in/matt-skeen-47b50730/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-			</div>
+        /* Navigation */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100vh;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            border-right: 1px solid rgba(100, 200, 255, 0.3);
+        }
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; All rights reserved.</li>
-					</ul>
-				</div>
-			</footer>
+        #sidebar.active {
+            left: 0;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: rgba(100, 200, 255, 0.2);
+            border: 2px solid rgba(100, 200, 255, 0.5);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
 
-	</body>
-</html>
+        .menu-toggle:hover {
+            background: rgba(100, 200, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 80px 30px;
+        }
+
+        nav li {
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        nav li:nth-child(1) { animation-delay: 0.1s; }
+        nav li:nth-child(2) { animation-delay: 0.2s; }
+        nav li:nth-child(3) { animation-delay: 0.3s; }
+        nav li:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: rgba(100, 200, 255, 0.2);
+            transform: translateX(10px);
+        }
+
+        /* Main content */
+        #wrapper {
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 10;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #64c8ff, #ffffff, #64c8ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .typing-effect {
+            border-right: 2px solid #64c8ff;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                border-color: #64c8ff;
+            }
+            51%, 100% {
+                border-color: transparent;
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #64c8ff, #4dabf7);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(100, 200, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(100, 200, 255, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #64c8ff, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* About section with dynamic cards */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(100, 200, 255, 0.5);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(100, 200, 255, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 30px rgba(100, 200, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(100, 200, 255, 0);
+            }
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Certification badges with hover effects */
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .cert-badge {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cert-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(100, 200, 255, 0.3);
+        }
+
+        .cert-badge:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Employment history with timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, #64c8ff, #4dabf7);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: rgba(26, 26, 62, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 0 30px;
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #64c8ff;
+            border-radius: 50%;
+            top: 30px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -40px;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(100, 200, 255, 0.2);
+        }
+
+        .timeline-content h3 {
+            color: #64c8ff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content .date {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Contact form with glassmorphism */
+        .contact-form {
+            background: rgba(26, 26, 62, 0.7);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #64c8ff;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #64c8ff;
+            box-shadow: 0 0 20px rgba(100, 200, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #64c8ff, #4dabf7);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(100, 200, 255, 0.4);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-content {
+                margin-left: 50px;
+                margin-right: 0;
+            }
+
+            .timeline-content::before {
+                left: -40px;
+            }
+
+            .certifications {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+                    <li><a href="#employment" onclick="closeMenu()">Employment</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                    <li><a href="#" onclick="closeMenu()">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <div id="wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>The Skeen Advantage</h1>
+                <p class="typing-effect" id="typing-text"></p>
+                <a href="#about" class="cta-button">Discover More</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="profile-image">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjE1MCIgY3k9IjE1MCIgcj0iMTUwIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPgo8Y2lyY2xlIGN4PSIxNTAiIGN5PSIxMjAiIHI9IjUwIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjMiLz4KPGVsbGlwc2UgY3g9IjE1MCIgY3k9IjIzMCIgcng9IjgwIiByeT0iNDAiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMyIvPgo8ZGVmcz4KPGF1bmlhckdyYWRpZW50IGlkPSJncmFkaWVudCIgY3g9IjAuNSIgY3k9IjAuNSIgcj0iMC41Ij4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0YzhmZiIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZGFiZjciLz4KPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K" alt="Matt Skeen" />
+                </div>
+                <div class="about-text">
+                    <p>I am a distinguished IT and Security professional with expertise in a diverse range of technologies within multiple industry standards.</p>
+                    <br>
+                    <p>I develop strategic roadmaps and work with business leaders to ensure business objectives are met with operational efficiency, securely, and cost effectively.</p>
+                    <br>
+                    <p>I continue to demonstrate success in managing Cloud Native Solutions, DevOps, Networking, Systems Administration, Governance and Security related technologies.</p>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <div class="cert-badge">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMTUiIGZpbGw9IiMwMDY2Y2MiLz4KPHN2ZyB4PSIyMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+Cjx0ZXh0IHg9IjQwIiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNJU1NQPC90ZXh0Pgo8dGV4dCB4PSI0MCIgeT0iNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2VydGlmaWVkPC90ZXh0Pgo8dGV4dCB4PSI0MCIgeT0iNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SW5mb3JtYXRpb248L3RleHQ+Cjx0ZXh0IHg9IjQwIiB5PSI3MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TZWN1cml0eTwvdGV4dD4KPC9zdmc+CjwvcmVjdD4KPC9zdmc+" alt="CISSP Certification" />
+                </div>
+                <div class="cert-badge">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMTUiIGZpbGw9IiNmZjY2MDAiLz4KPHN2ZyB4PSIyMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+Cjx0ZXh0IHg9IjQwIiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNJU008L3RleHQ+Cjx0ZXh0IHg9IjQwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DZXJ0aWZpZWQ8L3RleHQ+Cjx0ZXh0IHg9IjQwIiB5PSI2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbmZvcm1hdGlvbjwvdGV4dD4KPHR4dCB4PSI0MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U2VjdXJpdHk8L3RleHQ+CjwvHN2Zz4KPC9yZWN0Pgo8L3N2Zz4=" alt="CISM Certification" />
+                </div>
+                <div class="cert-badge">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMTUiIGZpbGw9IiM2NmNjZmYiLz4KPHN2ZyB4PSIyMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+Cjx0ZXh0IHg9IjQwIiB5PSIzMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNDU0s8L3RleHQ+Cjx0ZXh0IHg9IjQwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DbG91ZCBTZWN1cml0eTwvdGV4dD4KPHR4dCB4PSI0MCIgeT0iNjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+S25vd2xlZGdlPC90ZXh0Pgo8dGV4dCB4PSI0MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Q2VydGlmaWNhdGU8L3RleHQ+CjIvPgotPC9zdmc+CjwvcmVjdD4KPC9zdmc+" alt="CCSK Certification" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Employment History -->
+        <section id="employment" class="reveal">
+            <h2 class="section-title">Employment History</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Moodys</h3>
+                        <div class="date">April 2022 - Present</div>
+                        <p>BISO, Head of Security Architecture</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fishtech Group / CYDERES</h3>
+                        <div class="date">August 2016 - April 2022</div>
+                        <p>Director of Information Technology</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Workview</h3>
+                        <div class="date">May 2016 - August 2016</div>
+                        <p>Director of Information Technology</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>GEHA</h3>
+                        <div class="date">August 2015 - May 2016</div>
+                        <p>Security Analyst</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>FishNet Security / Optiv</h3>
+                        <div class="date">July 2010 - May 2015</div>
+                        <p>Systems Administrator
