@@ -86,7 +86,7 @@
 	    <div id="blog-preview-wrap" style="margin-top:14px;width:100%;text-align:left">
         <div class="section-title"><h2 style="font-size:16px;margin:0">Latest from the blog</h2><div style="color:var(--muted);font-size:13px">Weekly posts</div></div>
         <div id="blog-preview" style="margin-top:10px;color:var(--muted);font-size:14px">Loading posts…</div>
-        <div style="margin-top:8px"><a class="btn" href="/blog/">View all posts</a></div>
+        <div style="margin-top:8px"><a class="btn" href="blog/">View all posts</a></div>
       </div>
     </aside>
 
@@ -179,14 +179,14 @@
         list.slice(0,3).forEach(p => {
           const el = document.createElement('div');
           el.style.marginBottom = '10px';
-          el.innerHTML = `<a href="/blog/?post=${encodeURIComponent(p.slug)}" style="color:var(--accent);font-weight:700;text-decoration:none">${p.title}</a>
-                          <div style="color:var(--muted);font-size:13px">${p.date} — ${p.excerpt || ''}</div>`;
+           el.innerHTML = `<a href="blog/?post=${encodeURIComponent(p.slug)}" style="color:var(--accent);font-weight:700;text-decoration:none">${p.title}</a>
+                           <div style="color:var(--muted);font-size:13px">${p.date} — ${p.excerpt || ''}</div>`;
           wrap.appendChild(el);
         });
       }catch(e){
         // silently fail, leave the "Loading posts…" text or replace with a friendly message
         const wrap = document.getElementById('blog-preview');
-        if(wrap) wrap.textContent = 'No posts found. Add posts to /blog/posts/';
+        if(wrap) wrap.textContent = 'No posts found. Add posts to blog/posts/';
       }
     })();
   </script>

@@ -40,7 +40,7 @@
   <script>
     async function loadIndex(){
       try{
-        const res = await fetch('/blog/posts/index.json', {cache:'no-store'});
+        const res = await fetch('posts/index.json', {cache:'no-store'});
         const list = res.ok ? await res.json() : [];
         const postsEl = document.getElementById('posts');
         postsEl.innerHTML = '';
@@ -60,7 +60,7 @@
 
     async function loadPost(slug){
       try{
-        const path = `/blog/posts/${slug}.md`;
+        const path = `posts/${slug}.md`;
         const res = await fetch(path, {cache:'no-store'});
         if(!res.ok) { history.replaceState({},'', '/blog/'); return loadIndexView(); }
         const md = await res.text();
