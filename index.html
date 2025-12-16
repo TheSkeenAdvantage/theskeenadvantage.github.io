@@ -74,7 +74,8 @@
       </div>
       <div class="actions" style="margin-top:12px">
         <a class="btn primary" href="assets/MattSkeen_Resume.pdf" download>Download Resume</a>
-        <a class="btn" href="#contact">Contact</a>
+        <a class="btn" href="/blog/" style="padding:10px 14px">Blog</a>
+		<a class="btn" href="#contact">Contact</a>
       </div>
 
       <dl class="meta" style="margin-top:18px">
@@ -82,7 +83,13 @@
         <dt>Email</dt><dd><a class="btn" href="mailto:hello@theskeenadvantage.com" style="padding:6px 8px;font-size:13px">hello@theskeenadvantage.com</a></dd>
         <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/matt-skeen-47b50730/" class="btn" style="padding:6px 8px;font-size:13px">linkedin.com/in/mattskeen</a></dd>
       </dl>
+	    <div id="blog-preview-wrap" style="margin-top:14px;width:100%;text-align:left">
+        <div class="section-title"><h2 style="font-size:16px;margin:0">Latest from the blog</h2><div style="color:var(--muted);font-size:13px">Weekly posts</div></div>
+        <div id="blog-preview" style="margin-top:10px;color:var(--muted);font-size:14px">Loading posts…</div>
+        <div style="margin-top:8px"><a class="btn" href="/blog/">View all posts</a></div>
+      </div>
     </aside>
+
 
     <section class="card main">
       <div class="section-title">
@@ -148,11 +155,6 @@
         </div>
       </div>
 
-      <div id="contact" style="margin-top:12px">
-        <div class="section-title"><h2>Contact</h2><div style="color:var(--muted);font-size:13px">Let’s connect</div></div>
-        <p style="margin-top:8px;color:var(--muted)">Available for advisory, product leadership, and fractional roles. Email <a href="mailto:hello@theskeenadvantage.com" style="color:var(--accent)">hello@theskeenadvantage.com</a> or use LinkedIn.</p>
-      </div>
-
       <footer>
         © <span id="year"></span> The Skeen Advantage — Built with focus and intent.
       </footer>
@@ -165,6 +167,28 @@
     // fallback if profile image missing
     const img = document.querySelector('.avatar img');
     img.onerror = () => { img.src = 'https://placehold.co/400x400/0f1724/7ce7c8?text=MS'; }
+	// blog preview: reads simple index JSON at /blog/posts/index.json
+    (async function loadBlogPreview(){
+      try{
+        const res = await fetch('/blog/posts/index.json', {cache: 'no-store'});
+        if(!res.ok) throw new Error('no index');
+        const list = await res.json();
+        const wrap = document.getElementById('blog-preview');
+        if(!list || !list.length){ wrap.textContent = 'No posts yet.'; return; }
+        wrap.innerHTML = '';
+        list.slice(0,3).forEach(p => {
+          const el = document.createElement('div');
+          el.style.marginBottom = '10px';
+          el.innerHTML = `<a href="/blog/?post=${encodeURIComponent(p.slug)}" style="color:var(--accent);font-weight:700;text-decoration:none">${p.title}</a>
+                          <div style="color:var(--muted);font-size:13px">${p.date} — ${p.excerpt || ''}</div>`;
+          wrap.appendChild(el);
+        });
+      }catch(e){
+        // silently fail, leave the "Loading posts…" text or replace with a friendly message
+        const wrap = document.getElementById('blog-preview');
+        if(wrap) wrap.textContent = 'No posts found. Add posts to /blog/posts/';
+      }
+    })();
   </script>
 </body>
 </html>
