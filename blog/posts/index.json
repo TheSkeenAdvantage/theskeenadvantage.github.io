@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-03-10-fortune-500-ai-agents-governance",
+    "title": "80% of Fortune 500 Companies Are Running AI Agents. Most Security Programs Aren't Ready.",
+    "date": "2026-03-10",
+    "excerpt": "The visibility gap between AI deployment speed and security oversight is now an enterprise risk — not a future concern."
+  },
+  {
+    "slug": "2026-03-10-anthropic-claude-code-security-appsec",
+    "title": "Anthropic Just Changed the Game for AppSec. Here's What Your Security Team Needs to Know.",
+    "date": "2026-03-10",
+    "excerpt": "Claude Code Security found 22 vulnerabilities in Firefox in two weeks. That should get every CISO's attention."
+  },
+  {
     "slug": "2025-12-15-InitialProcessOptimizationPartOne",
     "title": "Automating SaaS Security Assessments with AI: Part 1 - The Problem and the Search for a Solution",
     "date": "2025-12-15",
